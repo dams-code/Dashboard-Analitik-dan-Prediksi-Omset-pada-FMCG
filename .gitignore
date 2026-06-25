@@ -1,0 +1,6 @@
+.env
+*.sql
+*.js
+*.css
+script/
+style/
