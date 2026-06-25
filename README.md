@@ -94,9 +94,9 @@ Dan data yang saya gunakan adalah custom data (independent data) yang saya kumpu
 
 ---
 
-## Tambahan untuk Corn Job
+## Tambahan untuk Cron Job
 
-Pada project ini saya belum menambahkan terkait proses corn-nya.
+Pada project ini saya belum menambahkan terkait proses cron-nya.
 Langkahnya kurang lebih seperti ini:
 
 1. Buat file didalam folder root `run_pipeline.bat`
