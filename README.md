@@ -70,6 +70,8 @@ Dashboard-Analitik-dan-Prediksi-Omset-pada-FMCG
 ├── Hasil-Dashboard-4.png
 ├── Hasil-Dashboard-5.png
 ├── Hasil-Dashboard-6.png
+├── Hasil-Dashboard-7.png
+├── Hasil-Dashboard-8.png
 ├── index.html
 └── README.md
 ```
@@ -85,7 +87,7 @@ Dashboard-Analitik-dan-Prediksi-Omset-pada-FMCG
     </div>
     <div style="margin-bottom: 40px; max-width: 800px;">
         <img src="Hasil-Dashboard-2.png" alt="Dashboard Overview" width="100%"/>
-        <p style="margin-top: 10px;"><b>2. Tampilan Tren Penjualan pada Bulan Januari baik ber hari-nya pada Line Chart dan proporsi grand total omset penjualan produk yang ditunjukan pada Pie Chart.</b></p>
+        <p style="margin-top: 10px;"><b>2. Menampilkan Tren Penjualan pada Bulan Januari baik di setiap hari-nya pada Line Chart dan proporsi grand total omset penjualan produk yang ditunjukan pada Pie Chart.</b></p>
         <hr size="1" color="#e5e7eb">
     </div>
     <div style="margin-bottom: 40px; max-width: 800px;">
@@ -106,6 +108,14 @@ Dashboard-Analitik-dan-Prediksi-Omset-pada-FMCG
     <div style="margin-bottom: 20px; max-width: 800px;">
         <img src="Hasil-Dashboard-6.png" alt="Dashboard Overview" width="100%"/>
         <p style="margin-top: 10px;"><b>6. Menampilkan proporsi penjualan Chitato 68G bulan Maret paling banyak dari 4 produk lainnya sebanyak Rp. 880.000 (Secara Grand Total)</b></p>
+    </div>
+    <div style="margin-bottom: 20px; max-width: 800px;">
+        <img src="Hasil-Dashboard-7.png" alt="Dashboard Overview" width="100%"/>
+        <p style="margin-top: 10px;"><b>7. Menampilkan Tren Penjualan pada Bulan April baik di setiap hari-nya pada Line Chart dan proporsi grand total omset penjualan produk yang ditunjukan pada Pie Chart.</b></p>
+    </div>
+    <div style="margin-bottom: 20px; max-width: 800px;">
+        <img src="Hasil-Dashboard-8.png" alt="Dashboard Overview" width="100%"/>
+        <p style="margin-top: 10px;"><b>8. Menampilkan Tren Penjualan pada Bulan Mei baik di setiap hari-nya pada Line Chart dan proporsi grand total omset penjualan produk yang ditunjukan pada Pie Chart.</b></p>
     </div>
 </div>
 
