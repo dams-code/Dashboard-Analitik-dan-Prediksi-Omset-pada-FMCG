@@ -77,6 +77,63 @@ Dashboard-Analitik-dan-Prediksi-Omset-pada-FMCG
 ```
 ---
 
+## Metode STAR
+Yang dapat saya peroleh selama saya bekerja sebagai developer sekaligus sebagai reporting dashboard pada SIMRS,
+dapat dijumpai sepanjang hari terkait data yang kotor, dengan format yang perlu kita susun ulang untuk memperoleh insight, kesimpulan sebuah data, keputusan pada data, dan untuk membuat real-time dashboard agar dapat diakses sepanjang hari oleh user.
+dan dari experimen yang salah lakukan pada project ini didasari oleh:
+
+* 1. Situation: Banyak data di lapangan yang masuk dalam kondisi kotor (typo, null, duplikat).
+
+* 2. Task: Wajib membuat sistem otomatis yang bisa membersihkan data sekaligus memprediksi omset esok hari.
+
+* 3. Action: Saya mencoba membangun pipeline otomatis dengan Python Pandas dan ML, disimpan di SQL Server, dikirim via API Go, dan divisualisasikan dengan Chart.js.
+
+* 4. Result: Dari sisi cross-management di perusahaan  bisa melihat tren real-time dan langsung tahu produk / case subject dengan performa terendah berkat indikator warna dinamis.
+
+Dan data yang saya gunakan adalah custom data (independent data) yang saya kumpulan sendiri dan custom sendiri untuk experimen.
+
+---
+
+## Tambahan untuk Corn Job
+
+Pada project ini saya belum menambahkan terkait proses corn-nya.
+Langkahnya kurang lebih seperti ini:
+
+* 1. Buat file didalam folder root `run_pipeline.bat`
+* 2. Isi dengan kode berikut
+    ```code
+        @echo off
+        cd /d "%~dp0python_inference_cron"
+        python cron_predict.py
+        exit
+    ```
+* 3. Cari `Task Scheduler` di windows (kebetulan saya pakai windows 11)
+* 4. Di panel bagian kanan (Actions), klik Create Basic Task
+* 5. Pada Name, Isi dengan nama, contoh: FMCG_Data_Cleaning.
+* 6. Pada Description: (Opsional) Isi dengan deskripsi proyek, contoh: Script untuk membersihkan custom data dan update model prediksi harian.
+* 7. Klik Next.
+* 8. Pada pilihan Task Trigger, pilih Daily (Harian). Pilih ini sebagai trigger awal sebelum diubah menjadi per 5 menit.
+* 9. Klik Next
+* 10. Lalu Atur pada bagian waktu mulai (Start time) bebas (set saja default), lalu klik Next.
+* 11. Pada pilihan Action, pilih Start a program
+* 12. Klik Next
+* 13. Pada kolom Program/script, klik tombol Browse, dan cari file run_pipeline.bat.
+* 14. Pada kolom Start in (optional), masukkan alamat path absolut folder root (contoh: C:\Users\nama\Documents\project). supaya Git dan .env terbaca.
+* 15. Klik Next, lalu klik Finish
+
+Cara Uji
+
+* 1. Ke Task Scheduler
+* 2. Klik dua kali (Double-click) pada nama tugas tersebut untuk membuka jendela Properties.
+* 3. Masuk ke tab Triggers, lalu klik tombol Edit
+* 4. Advanced settings
+* 5. Centang kotak Repeat task every, lalu ketik atau pilih 5 minutes
+* 6. Pada pilihan for a duration of, ubah atau ketik menjadi Indefinitely (berjalan secara terus menerus)
+* 7. Klik OK pada jendela Edit, dan klik OK sekali lagi pada jendela Properties
+
+
+---
+
 ## View Dashboard
 
 <div align="center">
